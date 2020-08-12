@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<body>
+  <div id="map"></div>
+
+  <script src="https://d3js.org/d3.v5.min.js" type="text/javascript"></script>
+  <script src="https://d3js.org/topojson.v1.min.js" type="text/javascript"></script>
+  <!--script src="https://d3js.org/d3-array.v1.min.js" type="text/javascript"></script-->
+  <!--script src="https://d3js.org/d3-geo.v1.min.js" type="text/javascript"></script-->
+  <!--script src="https://d3js.org/d3-selection.v1.min.js" type="text/javascript"></script-->
+  <!--script src="https://d3js.org/d3-collection.v1.min.js" type="text/javascript"></script-->
+  <!--script src="https://d3js.org/d3-dispatch.v1.min.js" type="text/javascript"></script-->
+  <!--script src="https://cdn.jsdelivr.net/npm/d3-require@1" type="text/javascript"></script-->
+  <script src="https://d3js.org/d3-request.v1.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-composite-projections/1.0.1/d3-composite-projections.min.js" type="text/javascript"></script>
+  <script>
+  /*  
+  var d3_composite = require("d3-composite-projections");
+  var d3_geo = require("d3-geo");
+  var d3_request = require("d3-request");
+  var d3_selection = require("d3-selection");
+  var d3_transition = require("d3-transition");
+  var topojson = require("topojson");
+  */
+  var d3_composite = d3;//.require("d3-composite-projections");
+  var d3_geo = d3;//.require("d3-geo");
+  var d3_request = d3;//.require("d3-request");
+  var d3_selection = d3;//.require("d3-selection");
+  var d3_transition = d3;//.require("d3-transition");
+  //var topojson = d3;//.require("topojson");
+  var width = 975;
+  var height = 610;
+
+  ///////////////////////////////////////////////////
+  // this is d3.geo.mercator() or d3.geo.albers() equavilent
+  var projection = d3_composite.geoAlbersUsa().scale(1300).translate([487.5, 305]);
+  // projection path for "d" element to be passed to D3
+  var path = d3_geo.geoPath().projection(projection);
+  ///////////////////////////////////////////////////
+
+  var svg = d3_selection.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+                //https://cdn.jsdelivr.net/npm/us-atlas@3/states-albers-10m.json
+                //https://gist.githubusercontent.com/mbostock/4090846/raw/07e73f3c2d21558489604a0bc434b3a5cf41a867/us-congress-113.json
+  d3_request.json("https://gist.githubusercontent.com/mbostock/4090846/raw/07e73f3c2d21558489604a0bc434b3a5cf41a867/us.json", 
+                  function(error, topojsonData) {
+                    // change topojsonData.objects.states to topojsonData.objects.districts if using us-congress-113.json instead of us.json
+                    var us = topojson.feature(topojsonData, topojsonData.objects.states);
+                    console.log(us);
+                    console.log(us.features);
+                    svg.selectAll(".region")
+                      .data(us.features)
+                      .enter()
+                      .append("path")
+                      // the actual projection path
+                      .attr("d", path)
+                      .attr("class","region")
+                      .style("opacity", ".8")
+                      .style("fill", "slategrey")
+                      .style("stroke", "white")
+                      .style("stroke-width", "0.5px")
+                      .on("mouseover", function(d,i) {
+                        d3_selection.select(this).transition().duration(500).style("fill", "#808080");
+                        })
+                      .on("mouseout", function(d,i) {
+                        //d3_selection.select(this).interrupt();
+                        d3_selection.select(this).transition().duration(2000).style("fill", "slategrey");
+                        });
+                      // this is the map composition borders for Alaska(02) & Hawaii(15)
+                      svg.append("path")
+                          .style("fill","none")
+                          .style("stroke","black")
+                          .attr("d", projection.getCompositionBorders());
+
+                      var geoPoint = {
+                        "type" : "Point",
+                        "coordinates" : [-117.156389, 32.715278]
+                      }
+                      console.log(d3.geoPath(geoPoint));
+
+                      svg.append("path")
+                          .style("fill", "none")
+                          .style("stroke", "black")
+                          .attr("d", d3.geoPath(geoPoint));
+                      //console.log(firstDot);
+                  } 
+                );
+  //var g = svg.append("g").attr("fill", "red").attr("stroke", "black");
+              
+  var parseDate = d3.timeParse("%m/%d/%Y %H:%M");
+  var projection2 = d3.geoAlbersUsa().scale(1280).translate([480, 300]);
+  var ufoDataTmp = d3.csv("http://remy177.github.io/us168ufoDataLLD.csv", function(ufoData) {
+    console.log(ufoData);
+    console.log(ufoData[0].date);
+    var p = projection2(ufoData);
+    console.log(p);
+    console.log(projection2);
+    //p.date = parseDate(ufoData[0].date);
+    //return p;
+    //ufoData.sort((a, b) => a.date - b.date);
+    console.log(ufoData);
+
+    ufoData.forEach( data => {
+      data.lng = +data.lng;
+      data.lat = +data.lat;
+    });
+
+    var geoPoint = {
+      "type" : "Point",
+      "coordinates" : [ufoData[0].lng, ufoData[0].lat]
+    }
+    
+    console.log(geoPoint);
+    console.log(d3.geoPath(geoPoint));
+    var coordinate = d3_geo.geoPath().projection([ufoData[0].lng, ufoData[0].lat]);
+    console.log(coordinate);
+    var firstDot = svg.append("path").attr("d", d3.geoPath().projection(geoPoint));
+    console.log(firstDot);
+
+    var circles = svg.selectAll("circle")
+                      .data(ufoData)
+                      .enter()
+                      .append("circle")
+                      .attr("cx", function (d) { return (d.lng + 480); })
+                      .attr("cy", function (d) { return (d.lat + 300); })
+                      .attr("r", 20);
+    console.log(circles);
+      //.attr("fill", "blue")
+      //.attr("transform", `translate(${ufoData[0].lng},${-ufoData[0].lat})`)
+      //.attr("transform", `translate(523, 353)`)
+      //.attr("r", 20);
+    /*
+    for (const d of data) {
+    d3.timeout(() => {
+      g.append("circle")
+          .attr("transform", `translate(${d})`)
+          .attr("r", 3)
+          .attr("fill-opacity", 1)
+          .attr("stroke-opacity", 0)
+        .transition()
+          .attr("fill-opacity", 0)
+          .attr("stroke-opacity", 1);
+    }, delay(d.date));
+  }
+    */
+  });
+  </script>
+</body>
