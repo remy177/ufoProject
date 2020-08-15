@@ -1,8 +1,13 @@
 # make sure to include blueprints - taken from shanes code in resources
-from flask import Flask, render_template, redirect, Blueprint
+from flask import Flask, render_template, redirect, Blueprint, jsonify
 import scrape_costa
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func
 
-# add a header to each response
+
+# add a header to each response (Is this CORS Response?)
 @app.after_request
 def after_request(response):
         header = response.headers
@@ -14,10 +19,10 @@ app = Flask(__name__)
 
 # from class demo including PyMongo - but we are using SQL 
 # Use PyMongo to establish Mongo connection
-#mongo = PyMongo(app, uri="mongodb://localhost:27017/weather_app")
-
+#mongo = PyMongo(app, uri="mongodb://localhost:27017/weather_app") change PyMongo to Posgres 
+# SQL Lite possibly 
 #How to establish connection to SQL database?
-from flask_sqlalchemy import SQLAlchemy 
+#from flask_sqlalchemy import SQLAlchemy 
 db = SQLAlchemy()
 
 # Route to render index.html template using data from SQL
