@@ -17,6 +17,8 @@ app = Flask(__name__)
 #mongo = PyMongo(app, uri="mongodb://localhost:27017/weather_app")
 
 #How to establish connection to SQL database?
+from flask_sqlalchemy import SQLAlchemy 
+db = SQLAlchemy()
 
 # Route to render index.html template using data from SQL
 @app.route("/")
