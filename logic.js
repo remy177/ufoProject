@@ -1,5 +1,5 @@
-var startYear = 1935;
-var endYear = 2015;
+var startYear = 1910;//1935;
+var endYear = 2002;//2015;
 var currentYear = startYear;
 var width = 975;
 var height = 610;
@@ -7,7 +7,7 @@ var height = 610;
 ///////////////////////////////////////////////////
 // this is d3.geo.mercator() or d3.geo.albers() equavilent
 //var projection = d3.geoAlbersUsa().scale(1300).translate([500, 300]); // for D3 v4
-var projection = d3.geo.albersUsa().scale(1200).translate([500, 310]); // for D3 v3
+var projection = d3.geo.albersUsa().scale(1200).translate([500, 300]); // for D3 v3
 // projection path for "d" element to be passed to D3
 var path = d3.geo.path().projection(projection); // for D3 v3
 //var path = d3.geoPath().projection(projection); // for D3 v4
@@ -81,11 +81,11 @@ async function drawMap() {
 await  d3.json(
     "https://gist.githubusercontent.com/mbostock/4090846/raw/07e73f3c2d21558489604a0bc434b3a5cf41a867/us.json",
     function (error, topojsonData) {
-      console.log(topojsonData);
+      //console.log(topojsonData);
       // change topojsonData.objects.states to topojsonData.objects.districts if using us-congress-113.json instead of us.json
       var us = topojson.feature(topojsonData, topojsonData.objects.states);
       console.log(us);
-      console.log(us.features);
+      //console.log(us.features);
       svg
         .selectAll(".region")
         .data(us.features)
@@ -120,12 +120,12 @@ function showData() {
   d3.csv("us16800ufoData.csv",
     function (cvsData) {
       ufoData = cvsData;
-      console.log(ufoData);
-      console.log(ufoData[0].year);
+      //console.log(ufoData);
+      //console.log(ufoData[0].year);
       ufoData.sort((a, b) => a.year - b.year);
       
       //var parseDate = d3.timeParse("%m/%d/%Y %H:%M"); // for D3 v4
-      var parseDate = d3.time.format("%m/%d/%Y %H:%M").parse; // for D3 v3
+      var parseDate = d3.time.format("%Y-%m-%d %H:%M:%S").parse; // for D3 v3
 
       ufoData.forEach((data) => {
         data.lng = +data.lng;
@@ -138,13 +138,13 @@ function showData() {
       toolTip = createTooltip();
 
       var circles = createCircles(ufoData, toolTip);
-      //var circles = createCirclesByYear(ufoData, toolTip, 2010);
+      //var circles = createCirclesByYear(ufoData, toolTip, 2012);
       //console.log(circles);
 
       svg.call(toolTip);
 
-      console.log(ufoData);
-      console.log(ufoData[0].year);
+      //console.log(ufoData);
+      //console.log(ufoData[0].year);
     }
   );
 }
