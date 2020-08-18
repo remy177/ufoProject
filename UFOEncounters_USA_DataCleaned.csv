@@ -1,0 +1,65 @@
+dateseen,city,state,country,shape,EncounterType
+2000-10-11,whittier,ca,us,light,Encounter
+2004-10-01,las vegas,nv,us,cylinder,Encounter
+1994-10-12,okeechobee,fl,us,disk,Encounter
+2002-10-12,australia (rural),,,other,Encounter
+2002-10-12,paris,tx,us,triangle,Encounter
+2000-10-13,louisville,ky,us,triangle,Encounter
+1975-10-15,rockville,md,us,disk,Abduction
+1986-10-15,salem,or,us,cigar,Encounter
+2004-10-15,dallas/ft. worth (mansfield),tx,,fireball,Encounter
+2005-10-15,ammon,id,us,triangle,Encounter
+2001-10-16,polk county,or,,unknown,Encounter
+1999-10-19,apache junction (east of),az,us,other,Encounter
+1976-10-20,soldotna,ak,us,sphere,Encounter
+1984-10-20,columbus,oh,us,light,Encounter
+1992-10-20,kaunas (lithuania),,,unknown,Encounter
+2007-10-20,ellinwood,ks,us,disk,Encounter
+2003-10-22,wikieup,az,us,formation,Encounter
+2010-10-22,phoenix,az,us,circle,Encounter
+2010-10-25,amherst,va,us,unknown,Encounter
+1987-10-30,pleasant hill,ca,us,sphere,Encounter
+2006-10-03,portland,or,us,circle,Encounter
+1968-10-05,nunda,sd,us,disk,Encounter
+1996-10-06,fire island (long island),ny,us,other,Encounter
+1979-11-10,emerson,nj,us,rectangle,Encounter
+1995-11-11,solvang,ca,us,,Encounter
+2006-11-11,cold lake (canada),ab,ca,,Encounter
+2006-11-11,mires (greece),,,other,Encounter
+1968-11-01,enid,ok,us,flash,Encounter
+1972-11-01,crescent city,ca,us,,Encounter
+2004-11-12,galveston,tx,us,cylinder,Encounter
+1983-11-14,buckhorn lake (canada),on,,disk,Encounter
+1973-11-15,talahassee (interstate 10 east of),fl,,light,Encounter
+1977-11-15,kalamazoo,mi,us,disk,Encounter
+1995-11-15,green co.,tn,,,Encounter
+2009-11-15,auburn/skaneateles (between),ny,,disk,Encounter
+2007-10-10,stockbridge,ga,us,changing,Abduction
+1972-10-01,potwin,ks,us,unknown,Abduction
+2007-10-12,rogers,ar,us,unknown,Abduction
+1975-10-15,rockville,md,us,disk,Encounter
+1975-10-15,rockville,md,us,disk,Encounter
+1995-10-15,hawesville,ky,us,cigar,Encounter
+1997-10-15,duncan,ok,us,unknown,Abduction
+2008-10-15,norman,ok,us,unknown,Encounter
+2010-10-15,harleysville,pa,us,circle,Encounter
+1998-10-28,polson/pablo,mt,,disk,Encounter
+1994-11-10,vidor,tx,us,unknown,Encounter
+2003-11-10,tuscaloosa,al,us,cone,Encounter
+2007-11-11,san antonio,tx,us,unknown,Abduction
+1970-11-01,rochester,ny,us,,Encounter
+2008-11-14,paducah,ky,us,,Abduction
+1974-11-15,cordova,ak,us,disk,Encounter
+1997-11-15,tamaqua,pa,us,light,Encounter
+2010-11-15,lakewood,wa,us,changing,Encounter
+1947-06-21,Maury Island,Washington,us,NR,Encounter
+1948-01-07,Maysville,Kentucky,us,NR,Encounter
+1948-07-24,Montgomery,Alabama,us,NR,Encounter
+1952-05-24,Burbank,California,us,NR,Encounter
+1964-04-24,Socorro,New Mexico,us,NR,Encounter
+1966-04-17,Akron,Ohio,us,NR,Encounter
+1980-12-29,Dayton,Texas,us,NR,Encounter
+1961-09-19,Portsmouth,New Hampshire,us,NR,Abduction
+1973-10-11,Jackson County,Mississippi,us,NR,Abduction
+1975-11-05,Snowflake,Arizona,us,NR,Abduction
+1976-08-20,Allagash ,Maine,us,NR,Abduction
