@@ -28,6 +28,8 @@ db = SQLAlchemy()
 # Route to render index.html template using data from SQL
 @app.route("/")
 def home():
+    #create session link from python to db
+    session = Session(engine)
 
     # Find one record of data from the SQL database
         # Mongo Demo Code:
