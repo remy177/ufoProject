@@ -13,19 +13,23 @@ var path = d3.geo.path().projection(projection); // for D3 v3
 //var path = d3.geoPath().projection(projection); // for D3 v4
 ///////////////////////////////////////////////////
 
-const dataset = ["us168ufoData.csv", "us1680ufoData.csv", "us16800ufoDataRandomSamples.csv", "us60800ufoData.csv"];
-var currentDataset = dataset[1];  // default is option 1 -> 1680 ufo records
-var svg = d3.select("body").append("svg").attr("width", width).attr("height", height);
 var ufoData;
 var totalUFO = 0;
 var firstClick = true;
 
+const dataset = ["us168ufoData.csv", "us1680ufoData.csv", "us16800ufoDataRandomSamples.csv", "us60800ufoData.csv"];
+var option = 1;
+var currentDataset = dataset[option];  // default is option 1 -> 1680 ufo records
+
+// read param from request and update options, button labels, and dataset used
+option = getParameterByName('options') ? getParameterByName('options') : currentDataset;
+currentDataset = getParameterByName('currentDataset') ? getParameterByName('currentDataset') : currentDataset;
+updateOptionButtons(option);
+
+var svg = d3.select("body").append("svg").attr("width", width).attr("height", height);
 var formatPercent = d3.format(",.0f");
 var x = d3.scale.linear().range([0, width]);
 var y = d3.scale.ordinal().rangeRoundBands([height, 0], .3, .3);
-console.log(getParameterByName('currentDataset'));
-currentDataset = getParameterByName('currentDataset') ? getParameterByName('currentDataset') : currentDataset;
-console.log(currentDataset);
 
 d3.queue()
     .defer(d3.json,"us.json")
@@ -255,16 +259,61 @@ function dataToggle() {
   console.log(val);
   currentDataset = dataset[val];
 
-  const form = document.form;
-  //form.method = 'post';
-
   const hiddenField = document.createElement('input');
   hiddenField.type = 'hidden';
   hiddenField.name = 'currentDataset';
   hiddenField.value = currentDataset;
 
+  const form = document.form;
   form.appendChild(hiddenField);
   document.form.submit();
+}
+
+// -------------------------------------------------------------
+
+function updateOptionButtons(option) {
+  if (option == 0) { 
+    $('#option1').addClass('active');
+    $('#option2').removeClass('active');
+    $('#option3').removeClass('active');
+    $('#label1').addClass('active');
+    $('#label2').removeClass('active');
+    $('#label3').removeClass('active');
+    document.getElementById("option1").checked = true;
+    document.getElementById("option2").checked = false;
+    document.getElementById("option3").checked = false;
+  } else if ( option == 1 ) { 
+    $('#option1').removeClass('active');
+    $('#option2').addClass('active');
+    $('#option3').removeClass('active');
+    $('#label1').removeClass('active');
+    $('#label2').addClass('active');
+    $('#label3').removeClass('active');
+    document.getElementById("option1").checked = false;
+    document.getElementById("option2").checked = true;
+    document.getElementById("option3").checked = false;
+  } else if ( option == 2 ) { 
+    $('#option1').removeClass('active');
+    $('#option2').removeClass('active');
+    $('#option3').addClass('active');
+    $('#label1').removeClass('active');
+    $('#label2').removeClass('active');
+    $('#label3').addClass('active');
+    document.getElementById("option1").checked = false;
+    document.getElementById("option2").checked = false;
+    document.getElementById("option3").checked = true;
+  } else {
+    $('#option1').removeClass('active');
+    $('#option2').addClass('active');
+    $('#option3').removeClass('active');
+    $('#label1').removeClass('active');
+    $('#label2').addClass('active');
+    $('#label3').removeClass('active');
+    document.getElementById("option1").checked = false;
+    document.getElementById("option2").checked = true;
+    document.getElementById("option3").checked = false;
+    console.log("### Default option used!!! ###");
+  } 
 }
 
 // -------------------------------------------------------------
@@ -282,6 +331,14 @@ function getRadioVal(form, name) {
       }
   }
   return val; // return value of checked radio or undefined if none checked
+}
+
+function check(name) {
+  document.getElementById(name).checked = true;
+}
+
+function uncheck(name) {
+  document.getElementById(name).checked = false;
 }
 
 function getParameterByName(name, url) {
