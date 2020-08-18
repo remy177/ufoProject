@@ -17,7 +17,7 @@ d3.json("data/data.json").then((importedData) => {
 
   // Trace1 for the 
   var trace1 = {
-    x: data.map(row => row.dateseen),
+    x: data.map(row => row.durationseconds),
     y: data.map(row => row.state),
     text: data.map(row => row.state),
     name: "UFO",
