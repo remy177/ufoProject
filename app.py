@@ -1,72 +1,37 @@
-# make sure to include blueprints - taken from shanes code in resources
-from flask import Flask, render_template, redirect, Blueprint, jsonify
-import scrape_costa
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
+import os
+basedir = os.path.abspath(os.path.dirname(__file__)) 
+#_file_ temporary name space of file 
 
 
-# add a header to each response (Is this CORS Response?)
-@app.after_request
-def after_request(response):
-        header = response.headers
-        header['Access-Control-Allow-Origin'] = '*'
-        return response
+class Config(object):
+    DEBUG = True
+    TESTING = False
+    CSRF_ENABLED = True
+    SECRET_KEY = 'this-really-needs-to-be-changed'
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+#see where secret key is being used (being declared here)
+# reference previous file for database url but example : DATABASE_URL="postgresql:///wordcount_dev"
+# return data from json via the URL to the html/js pushing from the back end to front end 
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+import os
 
-# Create an instance of Flask
+
 app = Flask(__name__)
+app.config.from_object(os.environ['APP_SETTINGS'])
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
-# from class demo including PyMongo - but we are using SQL 
-# Use PyMongo to establish Mongo connection
-#mongo = PyMongo(app, uri="mongodb://localhost:27017/weather_app") change PyMongo to Posgres 
-# SQL Lite possibly 
-#How to establish connection to SQL database?
-#from flask_sqlalchemy import SQLAlchemy 
-db = SQLAlchemy()
+#pull from database to serve engine, 
+@app.route('/')
+def hello():
+    return "Hello World!"
 
-# Route to render index.html template using data from SQL
-@app.route("/")
-def home():
-    #create session link from python to db
-    session = Session(engine)
 
-    # Find one record of data from the SQL database
-        # Mongo Demo Code:
-        #destination_data = mongo.db.collection.find_one()
-
-    # Return template and data
-    return render_template("index.html", vacation=destination_data)
-
-# Route to get data 
-@app.route("/api")
-def api():
-
-    # Find one record of data from the database
-    # because of object id failure: 
-    #destination_data = mongo.db.collection.find_one({}, {'_id': False}) for mango demonstration
-    destinations = [destination for destination in destination_data]
-    data = {
-        "destinations": destinations
-    }
-
-    # Return template and data
+@app.route('/<name>')
+def hello_name(name):
     return jsonify(data)
 
-# Route that will trigger the scrape function
-@app.route("/scrape")
-def scrape():
-
-    # Run the scrape function
-    costa_data = scrape_costa.scrape_info()
-
-    # Update the database using update and upsert=True
-    #From mongo demonstration
-     #mongo.db.collection.update({}, costa_data, upsert=True)
-
-    # Redirect back to home page
-    return redirect("/")
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run()
+    #debug=True for testing purposes 
