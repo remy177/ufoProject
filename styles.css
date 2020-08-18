@@ -1,0 +1,18 @@
+h1 {
+    font-size: 82px;
+    font-family: fantasy;
+  }
+
+  .header {
+    height: 250px;
+    padding-top: 25px;
+    background: #000000;
+  }
+  
+/* Centering our h1 tag inside our header, giving it a little padding, removing its margin */
+.header h1 {
+  padding: 60px;
+  margin: 0;
+  color: #1a9c23;
+  text-align: left;
+}

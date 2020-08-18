@@ -1,0 +1,506 @@
+[
+   {
+     "dateseen": "2000-10-11",
+     "city": "whittier",
+     "state": "ca",
+     "country": "us",
+     "shape": "light",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2004-10-01",
+     "city": "las vegas",
+     "state": "nv",
+     "country": "us",
+     "shape": "cylinder",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1994-10-12",
+     "city": "okeechobee",
+     "state": "fl",
+     "country": "us",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2002-10-12",
+     "city": "paris",
+     "state": "tx",
+     "country": "us",
+     "shape": "triangle",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2000-10-13",
+     "city": "louisville",
+     "state": "ky",
+     "country": "us",
+     "shape": "triangle",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1975-10-15",
+     "city": "rockville",
+     "state": "md",
+     "country": "us",
+     "shape": "disk",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "1986-10-15",
+     "city": "salem",
+     "state": "or",
+     "country": "us",
+     "shape": "cigar",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2004-10-15",
+     "city": "dallas/ft. worth (mansfield)",
+     "state": "tx",
+     "country": "",
+     "shape": "fireball",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2005-10-15",
+     "city": "ammon",
+     "state": "id",
+     "country": "us",
+     "shape": "triangle",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2001-10-16",
+     "city": "polk county",
+     "state": "or",
+     "country": "",
+     "shape": "unknown",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1999-10-19",
+     "city": "apache junction (east of)",
+     "state": "az",
+     "country": "us",
+     "shape": "other",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1976-10-20",
+     "city": "soldotna",
+     "state": "ak",
+     "country": "us",
+     "shape": "sphere",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1984-10-20",
+     "city": "columbus",
+     "state": "oh",
+     "country": "us",
+     "shape": "light",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1992-10-20",
+     "city": "kaunas (lithuania)",
+     "state": "",
+     "country": "",
+     "shape": "unknown",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2007-10-20",
+     "city": "ellinwood",
+     "state": "ks",
+     "country": "us",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2003-10-22",
+     "city": "wikieup",
+     "state": "az",
+     "country": "us",
+     "shape": "formation",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2010-10-22",
+     "city": "phoenix",
+     "state": "az",
+     "country": "us",
+     "shape": "circle",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2010-10-25",
+     "city": "amherst",
+     "state": "va",
+     "country": "us",
+     "shape": "unknown",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1987-10-30",
+     "city": "pleasant hill",
+     "state": "ca",
+     "country": "us",
+     "shape": "sphere",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2006-10-03",
+     "city": "portland",
+     "state": "or",
+     "country": "us",
+     "shape": "circle",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1968-10-05",
+     "city": "nunda",
+     "state": "sd",
+     "country": "us",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1996-10-06",
+     "city": "fire island (long island)",
+     "state": "ny",
+     "country": "us",
+     "shape": "other",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1979-11-10",
+     "city": "emerson",
+     "state": "nj",
+     "country": "us",
+     "shape": "rectangle",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1995-11-11",
+     "city": "solvang",
+     "state": "ca",
+     "country": "us",
+     "shape": "",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2006-11-11",
+     "city": "cold lake (canada)",
+     "state": "ab",
+     "country": "ca",
+     "shape": "",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2006-11-11",
+     "city": "mires (greece)",
+     "state": "",
+     "country": "",
+     "shape": "other",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1968-11-01",
+     "city": "enid",
+     "state": "ok",
+     "country": "us",
+     "shape": "flash",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1972-11-01",
+     "city": "crescent city",
+     "state": "ca",
+     "country": "us",
+     "shape": "",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2004-11-12",
+     "city": "galveston",
+     "state": "tx",
+     "country": "us",
+     "shape": "cylinder",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1983-11-14",
+     "city": "buckhorn lake (canada)",
+     "state": "on",
+     "country": "",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1973-11-15",
+     "city": "talahassee (interstate 10 east of)",
+     "state": "fl",
+     "country": "",
+     "shape": "light",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1977-11-15",
+     "city": "kalamazoo",
+     "state": "mi",
+     "country": "us",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1995-11-15",
+     "city": "green co.",
+     "state": "tn",
+     "country": "",
+     "shape": "",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2009-11-15",
+     "city": "auburn/skaneateles (between)",
+     "state": "ny",
+     "country": "",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2007-10-10",
+     "city": "stockbridge",
+     "state": "ga",
+     "country": "us",
+     "shape": "changing",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "1972-10-01",
+     "city": "potwin",
+     "state": "ks",
+     "country": "us",
+     "shape": "unknown",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "2007-10-12",
+     "city": "rogers",
+     "state": "ar",
+     "country": "us",
+     "shape": "unknown",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "1975-10-15",
+     "city": "rockville",
+     "state": "md",
+     "country": "us",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1975-10-15",
+     "city": "rockville",
+     "state": "md",
+     "country": "us",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1995-10-15",
+     "city": "hawesville",
+     "state": "ky",
+     "country": "us",
+     "shape": "cigar",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1997-10-15",
+     "city": "duncan",
+     "state": "ok",
+     "country": "us",
+     "shape": "unknown",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "2008-10-15",
+     "city": "norman",
+     "state": "ok",
+     "country": "us",
+     "shape": "unknown",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2010-10-15",
+     "city": "harleysville",
+     "state": "pa",
+     "country": "us",
+     "shape": "circle",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1998-10-28",
+     "city": "polson/pablo",
+     "state": "mt",
+     "country": "",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1994-11-10",
+     "city": "vidor",
+     "state": "tx",
+     "country": "us",
+     "shape": "unknown",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2003-11-10",
+     "city": "tuscaloosa",
+     "state": "al",
+     "country": "us",
+     "shape": "cone",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2007-11-11",
+     "city": "san antonio",
+     "state": "tx",
+     "country": "us",
+     "shape": "unknown",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "1970-11-01",
+     "city": "rochester",
+     "state": "ny",
+     "country": "us",
+     "shape": "",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2008-11-14",
+     "city": "paducah",
+     "state": "ky",
+     "country": "us",
+     "shape": "",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "1974-11-15",
+     "city": "cordova",
+     "state": "ak",
+     "country": "us",
+     "shape": "disk",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1997-11-15",
+     "city": "tamaqua",
+     "state": "pa",
+     "country": "us",
+     "shape": "light",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "2010-11-15",
+     "city": "lakewood",
+     "state": "wa",
+     "country": "us",
+     "shape": "changing",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1947-06-21",
+     "city": "Maury Island",
+     "state": "Washington",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1948-01-07",
+     "city": "Maysville",
+     "state": "Kentucky",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1948-07-24",
+     "city": "Montgomery",
+     "state": "Alabama",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1952-05-24",
+     "city": "Burbank",
+     "state": "California",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1964-04-24",
+     "city": "Socorro",
+     "state": "New Mexico",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1966-04-17",
+     "city": "Akron",
+     "state": "Ohio",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1980-12-29",
+     "city": "Dayton",
+     "state": "Texas",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Encounter"
+   },
+   {
+     "dateseen": "1961-09-19",
+     "city": "Portsmouth",
+     "state": "New Hampshire",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "1973-10-11",
+     "city": "Jackson County",
+     "state": "Mississippi",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "1975-11-05",
+     "city": "Snowflake",
+     "state": "Arizona",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Abduction"
+   },
+   {
+     "dateseen": "1976-08-20",
+     "city": "Allagash ",
+     "state": "Maine",
+     "country": "us",
+     "shape": "NR",
+     "EncounterType": "Abduction"
+   }
+  ]
