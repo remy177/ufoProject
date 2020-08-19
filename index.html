@@ -4,10 +4,21 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="chroniton.css" rel="stylesheet">
     <link href="slider-tooltip.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div id="slider"></div>
+  <header class="header">
+    <h1>Sightings, Encounters, Abductions in The US</h1>
+  </header>
+  
+  <div id="map"></div>
+
+  <div id="bar"></div>
+
+
+  <div id="plot"></div>
+
   
   <form id="form" name="form">
     <div class="btn-group btn-group-toggle btn-group-sm" data-toggle="button" role="group" style="margin-left: 380px; margin-top: 10px;">
@@ -25,10 +36,9 @@
     </div>
   </form>
   
-  <div id="bar"></div>
 
-  <div id="map"></div>
-  
+  <div id="slider"></div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
   <script src="https://d3js.org/d3.v3.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js" type="text/javascript"></script>
@@ -37,5 +47,11 @@
   <script src="https://d3js.org/d3-queue.v3.min.js" type="text/javascript"></script>
   <script src="chroniton.js" type="text/javascript"></script>
   <script src="logic.js" type="text/javascript"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
+  <script src="plots.js"></script>
+
+</body>
+
 
 </body>
