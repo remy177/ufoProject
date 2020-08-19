@@ -7,7 +7,7 @@ var height = 800;//610;
 ///////////////////////////////////////////////////
 // this is d3.geo.mercator() or d3.geo.albers() equavilent
 //var projection = d3.geoAlbersUsa().scale(1300).translate([500, 300]); // for D3 v4
-var projection = d3.geo.albersUsa().scale(1300).translate([550, 320]); // for D3 v3
+var projection = d3.geo.albersUsa().scale(1700).translate([750, 410]); // for D3 v3
 // projection path for "d" element to be passed to D3
 var path = d3.geo.path().projection(projection); // for D3 v3
 //var path = d3.geoPath().projection(projection); // for D3 v4
