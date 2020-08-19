@@ -30,7 +30,7 @@ d3.json("data/data.json").then((importedData) => {
 
   // Apply the group bar mode to the layout
   var layout = {
-    title: "Encounters & Abductions",
+    title: "Significant Encounters & Abductions by State",
     margin: {
       l: 100,
       r: 100,
